@@ -1,2 +1,2 @@
-pagination-testing-1
+Example blueprint with schema
 ====================
