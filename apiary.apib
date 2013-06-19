@@ -1,0 +1,23 @@
+--- schema ---
+
+POST /shopping-cart
+> Content-Type: application/json
+{ "items": [{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": 1, "name": "New socks", "price": 1.25}]}
+< 200
+
+
+-- JSON Schema Validations --
+POST /shopping-cart
+{
+    "type": "object",
+    "items": {
+        "options" : {
+            "type": "array"
+        },
+        "url" : {"type":"string"},
+        "product" : {"type":"string"},
+        "name" : {"type":"string"},
+        "quantity": {"type":"integer"},
+        "price": {"type": "decimal"}
+    }
+}
