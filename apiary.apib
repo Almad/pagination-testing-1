@@ -1,23 +1,41 @@
---- schema ---
+FORMAT: X-1A
 
-POST /shopping-cart
-> Content-Type: application/json
-{ "items": [{ "url": "/shopping-cart/1", "product":"2ZY48XPZ", "quantity": "1", "name": "New socks", "price": 1.25}]}
-< 200
+# Almad percent playground
+
+Oh well.
+
+# Some group
+
+## Retrieve SubResource [/Resource%28{id}%29/SubResource]
+
+### Retrieve it [GET]
+
++ Parameters
+
+    + id = `20` (number) ... ID of the resource
+
++ Response 200 (text/plain)
+
+    ```
+    SubResource response
+    ```
 
 
--- JSON Schema Validations --
-POST /shopping-cart
-{ "request": {
-    "type": "object",
-    "items": {
-        "options" : {
-            "type": "array"
-        },
-        "url" : {"type":"string"},
-        "product" : {"type":"string"},
-        "name" : {"type":"string"},
-        "quantity": {"type":"integer"},
-        "price": {"type": "decimal"}
-    }
-}}
+## Retrieve Resource [/Resource%28{id}%29]
+
+
+### Retrieve it [GET]
+
++ Request OMG
+    + Headers
+
+        ```
+        Accept: text/html
+        ```
+
++ Response 200 (text/plain)
+
+    ```
+    Resource response
+    ```
+
