@@ -1,2 +1,3 @@
 Example blueprint with schema
 ====================
+
